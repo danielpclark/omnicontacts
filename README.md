@@ -51,13 +51,13 @@ Please go through [MSDN](http://msdn.microsoft.com/en-us/library/cc287659.aspx) 
 
 ## Integrating with your Application
 
-To use the Gem you first need to redirect your users to `/contacts/:importer`, where `:importer` can be facebook, gmail, yahoo or hotmail.
+To use the Gem you first need to redirect your users to `/import/:importer`, where `:importer` can be facebook, gmail, yahoo or hotmail.
 No changes to `config/routes.rb` are needed for this step since OmniContacts will be listening on that path and redirect the user to the email provider's website in order to authorize your app to access his contact list.
 Once that is done the user will be redirected back to your application, to the path specified in `:redirect_path` (or `:callback_path` for yahoo).
-If nothing is specified the default value is `/contacts/:importer/callback` (e.g. `/contacts/yahoo/callback`). This makes things simpler and you can just add the following line to `config/routes.rb`:
+If nothing is specified the default value is `/import/:importer/callback` (e.g. `/import/yahoo/callback`). This makes things simpler and you can just add the following line to `config/routes.rb`:
 
 ```ruby
-  match "/contacts/:importer/callback" => "your_controller#callback"
+  match "/import/:importer/callback" => "your_controller#callback"
 ```
 
 The list of contacts can be accessed via the `omnicontacts.contacts` key in the environment hash and it consists of a simple array of hashes.
@@ -177,7 +177,7 @@ def contacts_callback
 end
 ```
 
-If the user does not authorize your application to access his/her contacts list, or any other inconvenience occurs, he/she is redirected to `/contacts/failure`. The query string will contain a parameter named `error_message` which specifies why the list of contacts could not be retrieved. `error_message` can have one of the following values: `not_authorized`, `timeout` and `internal_error`.
+If the user does not authorize your application to access his/her contacts list, or any other inconvenience occurs, he/she is redirected to `/import/failure`. The query string will contain a parameter named `error_message` which specifies why the list of contacts could not be retrieved. `error_message` can have one of the following values: `not_authorized`, `timeout` and `internal_error`.
 
 ##  Tips and tricks
 
