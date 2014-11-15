@@ -183,9 +183,9 @@ module OmniContacts
 
           if entry['gContact$birthday']
             entry['gContact$birthday'].each do |birth_day|
-              contact[:birthday] = birthday(birth_day['when'])
+              contact[:birthday] = birthday(birth_day.last)
               contact[:birthdays] = Array(contact[:birthdays]) << {
-                birthday: birthday(birth_day['when'])
+                birthday: birthday(birth_day.last)
               }
             end
           end
