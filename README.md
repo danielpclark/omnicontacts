@@ -1,8 +1,8 @@
-# OmniContacts
+# OmniContacts ReMastered
+
+##### Note: There are a few changes from the original source.  The mount path is currently at /import/ .  And Yahoo and Gmail have many more fields available.
 
 Inspired by the popular OmniAuth, OmniContacts is a library that enables users of an application to import contacts from their email or Facebook accounts.  The email providers currently supported are Gmail, Yahoo and Hotmail.  OmniContacts is a Rack middleware, therefore you can use it with Rails, Sinatra and any other Rack-based framework.
-
-#### Note: There are a few changes from the original source.  The mount path is currently at /import/ .  And Yahoo and Gmail have many more fields available.
 
 OmniContacts uses the OAuth protocol to communicate with the contacts provider. Yahoo still uses OAuth 1.0, while
  Facebook, Gmail and Hotmail support OAuth 2.0.
