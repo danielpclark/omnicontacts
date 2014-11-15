@@ -1,8 +1,8 @@
 # OmniContacts
 
-Inspired by the popular OmniAuth, OmniContacts is a library that enables users of an application to import contacts
-from their email or Facebook accounts. The email providers currently supported are Gmail, Yahoo and Hotmail.
-OmniContacts is a Rack middleware, therefore you can use it with Rails, Sinatra and any other Rack-based framework.
+Inspired by the popular OmniAuth, OmniContacts is a library that enables users of an application to import contacts from their email or Facebook accounts.  The email providers currently supported are Gmail, Yahoo and Hotmail.  OmniContacts is a Rack middleware, therefore you can use it with Rails, Sinatra and any other Rack-based framework.
+
+#### Note: There are a few changes from the original source.  The mount path is currently at /import/ .  And Yahoo and Gmail have many more fields available.
 
 OmniContacts uses the OAuth protocol to communicate with the contacts provider. Yahoo still uses OAuth 1.0, while
  Facebook, Gmail and Hotmail support OAuth 2.0.
@@ -13,7 +13,7 @@ In order to use OmniContacts, it is therefore necessary to first register your a
 Add OmniContacts as a dependency:
 
 ```ruby
-gem "omnicontacts"
+gem "omnicontacts", github: 'danielpclark/omnicontacts-rm'
 
 ```
 
@@ -282,6 +282,8 @@ As already mentioned above, a special thanks goes to @sonianand11 for implementi
 Thanks also to @asmatameem for her huge contribution. She indeed added support for Facebook and for many fields which were missing before.
 
 ## License
+
+Copyright (c) 2014 Daniel P. Clark
 
 Copyright (c) 2012-2013 Diego81
 
