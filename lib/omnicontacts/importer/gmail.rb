@@ -193,6 +193,7 @@ module OmniContacts
           if entry['gd$organization']
             contact[:company] = entry['gd$organization'].try(:first).try(:[],'gd$orgName').try(:[],'$t')
             contact[:position] = entry['gd$organization'].try(:first).try(:[],'gd$orgTitle').try(:[],'$t')
+            contact[:job_title] = contact[:position]
           end
 
           if entry['gd$im']
