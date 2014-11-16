@@ -64,101 +64,39 @@ The list of contacts can be accessed via the `omnicontacts.contacts` key in the 
 The following table shows which fields are supported by which provider:
 
 <table>
-	<tr>
-		<th>Provider</th>
-		<th>:email</th>
-		<th>:id</th>
-		<th>:profile_picture</th>
-		<th>:name</th>
-		<th>:first_name</th>
-		<th>:last_name</th>
-		<th>:address_1</th>
-		<th>:address_2</th>
-		<th>:city</th>
-		<th>:region</th>
-		<th>:postcode</th>
-		<th>:country</th>
-		<th>:phone_number</th>
-		<th>:birthday</th>
-		<th>:gender</th>
-		<th>:relation</th>
-	</tr>
-	<tr>
-		<td>Gmail</td>
-		<td>X</td>
-		<td>X</td>
-		<td></td>
-		<td>X</td>
-		<td>X</td>
-		<td>X</td>
-		<td>X</td>
-		<td>X</td>
-		<td>X</td>
-		<td>X</td>
-		<td>X</td>
-		<td>X</td>
-		<td>X</td>
-		<td>X</td>
-		<td>X</td>
-		<td>X</td>
-	</tr>
-	<tr>
-		<td>Facebook</td>
-		<td></td>
-		<td>X</td>
-		<td>X</td>
-		<td>X</td>
-		<td>X</td>
-		<td>X</td>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td>X</td>
-		<td>X</td>
-		<td>X</td>
-	</tr>
-	<tr>
-		<td>Yahoo</td>
-		<td>X</td>
-		<td>X</td>
-		<td></td>
-		<td>X</td>
-		<td>X</td>
-		<td>X</td>
-		<td>X</td>
-		<td>X</td>
-		<td>X</td>
-		<td>X</td>
-		<td>X</td>
-		<td></td>
-		<td></td>
-		<td>X</td>
-		<td></td>
-		<td></td>
-	</tr>
-	<tr>
-		<td>Hotmail</td>
-		<td>X</td>
-		<td>X</td>
-		<td>X</td>
-		<td>X</td>
-		<td>X</td>
-		<td>X</td>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td>X</td>
-		<td>X</td>
-		<td></td>
-	</tr>
+<tr><th></th><th></th><th>Facebook</th><th>Gmail</th><th>Hotmail</th><th>Yahoo</th></tr>
+ <tr><td>:id</td><td>nil, String</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+ <tr><td>:first_name</td><td>nil, String</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+ <tr><td>:middle_name</td><td>nil, String</td><td></td><td></td><td></td><td>X</td></tr>
+ <tr><td>:last_name</td><td>nil, String</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+ <tr><td>:name</td><td>nil, String</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+ <tr><td>:email</td><td>nil, String</td><td></td><td>X</td><td>X</td><td>X</td></tr>
+ <tr><td>:emails</td><td>Array[Hash[:sym] => String]</td><td></td><td>X</td><td></td><td>X</td></tr>
+ <tr><td>:gender</td><td>nil, String</td><td>X</td><td>X</td><td>X</td><td></td></tr>
+ <tr><td>:birthday</td><td>Hash[:sym] => Integer</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+ <tr><td>:birthdays</td><td>Array[Hash[:sym] => Integer]</td><td></td><td>X</td><td></td><td>X</td></tr>
+ <tr><td>:anniversary</td><td>Hash[:sym] => Integer</td><td></td><td></td><td></td><td>X</td></tr>
+ <tr><td>:anniversaries</td><td>Array[Hash[:sym] => Integer]</td><td></td><td></td><td></td><td>X</td></tr>
+ <tr><td>:profile_picture</td><td>nil, String</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+ <tr><td>:messenger_ids</td><td>Array[Hash[:sym] => String]</td><td></td><td>X</td><td></td><td>X</td></tr>
+ <tr><td>:phone</td><td>nil, String</td><td></td><td>X</td><td></td><td>X</td></tr>
+ <tr><td>:phones</td><td>Array[Hash[:sym] => String]</td><td></td><td>X</td><td></td><td>X</td></tr>
+ <tr><td>:address_1</td><td>nil, String</td><td></td><td>X</td><td></td><td>X</td></tr>
+ <tr><td>:address_2</td><td>nil, String</td><td></td><td>X</td><td></td><td>X</td></tr>
+ <tr><td>:address_3</td><td>nil, String</td><td></td><td>X</td><td></td><td>X</td></tr>
+ <tr><td>:city</td><td>nil, String</td><td></td><td>X</td><td></td><td>X</td></tr>
+ <tr><td>:region</td><td>nil, String</td><td></td><td>X</td><td></td><td>X</td></tr>
+ <tr><td>:postcode</td><td>nil, String</td><td></td><td>X</td><td></td><td>X</td></tr>
+ <tr><td>:country</td><td>nil, String</td><td></td><td>X</td><td></td><td>X</td></tr>
+ <tr><td>:country_abbrev</td><td>nil, String</td><td></td><td></td><td></td><td>X</td></tr>
+ <tr><td>:addresses</td><td>Array[Hash[:sym] => String]</td><td></td><td>X</td><td></td><td>X</td></tr>
+ <tr><td>:job_title</td><td>nil, String</td><td></td><td>X</td><td></td><td>X</td></tr>
+ <tr><td>:company</td><td>nil, String</td><td></td><td>X</td><td></td><td>X</td></tr>
+ <tr><td>:nickname</td><td>nil, String</td><td></td><td></td><td></td><td>X</td></tr>
+ <tr><td>:website</td><td>nil, String</td><td></td><td>X</td><td></td><td>X</td></tr>
+ <tr><td>:websites</td><td>Array[Hash[:sym] => String]</td><td></td><td>X</td><td></td><td>X</td></tr>
+ <tr><td>:notes</td><td>nil, String</td><td></td><td>X</td><td></td><td>X</td></tr>
+ <tr><td>:relation</td><td>nil, String</td><td>X</td><td>X</td><td></td><td></td></tr>
 </table>
 
 Obviously it may happen that some fields are blank even if supported by the provider in the case that the contact did not provide any information about them.
