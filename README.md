@@ -71,16 +71,16 @@ The following table shows which fields are supported by which provider:
  <tr><td>:last_name</td><td>nil, String</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
  <tr><td>:name</td><td>nil, String</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
  <tr><td>:email</td><td>nil, String</td><td></td><td>X</td><td>X</td><td>X</td></tr>
- <tr><td>:emails</td><td>Array[Hash[:sym] => String]</td><td></td><td>X</td><td></td><td>X</td></tr>
+ <tr><td>:emails</td><td>[], Array[Hash[:sym] => String]</td><td></td><td>X</td><td></td><td>X</td></tr>
  <tr><td>:gender</td><td>nil, String</td><td>X</td><td>X</td><td>X</td><td></td></tr>
- <tr><td>:birthday</td><td>Hash[:sym] => Integer</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
- <tr><td>:birthdays</td><td>Array[Hash[:sym] => Integer]</td><td></td><td>X</td><td></td><td>X</td></tr>
- <tr><td>:anniversary</td><td>Hash[:sym] => Integer</td><td></td><td></td><td></td><td>X</td></tr>
- <tr><td>:anniversaries</td><td>Array[Hash[:sym] => Integer]</td><td></td><td></td><td></td><td>X</td></tr>
+ <tr><td>:birthday</td><td>nil, Hash[:sym] => Integer</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+ <tr><td>:birthdays</td><td>[], Array[Hash[:sym] => Integer]</td><td></td><td>X</td><td></td><td>X</td></tr>
+ <tr><td>:anniversary</td><td>nil, Hash[:sym] => Integer</td><td></td><td></td><td></td><td>X</td></tr>
+ <tr><td>:anniversaries</td><td>[], Array[Hash[:sym] => Integer]</td><td></td><td></td><td></td><td>X</td></tr>
  <tr><td>:profile_picture</td><td>nil, String</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
- <tr><td>:messenger_ids</td><td>Array[Hash[:sym] => String]</td><td></td><td>X</td><td></td><td>X</td></tr>
+ <tr><td>:messenger_ids</td><td>[], Array[Hash[:sym] => String]</td><td></td><td>X</td><td></td><td>X</td></tr>
  <tr><td>:phone</td><td>nil, String</td><td></td><td>X</td><td></td><td>X</td></tr>
- <tr><td>:phones</td><td>Array[Hash[:sym] => String]</td><td></td><td>X</td><td></td><td>X</td></tr>
+ <tr><td>:phones</td><td>[], Array[Hash[:sym] => String]</td><td></td><td>X</td><td></td><td>X</td></tr>
  <tr><td>:address_1</td><td>nil, String</td><td></td><td>X</td><td></td><td>X</td></tr>
  <tr><td>:address_2</td><td>nil, String</td><td></td><td>X</td><td></td><td>X</td></tr>
  <tr><td>:address_3</td><td>nil, String</td><td></td><td>X</td><td></td><td>X</td></tr>
@@ -89,12 +89,12 @@ The following table shows which fields are supported by which provider:
  <tr><td>:postcode</td><td>nil, String</td><td></td><td>X</td><td></td><td>X</td></tr>
  <tr><td>:country</td><td>nil, String</td><td></td><td>X</td><td></td><td>X</td></tr>
  <tr><td>:country_abbrev</td><td>nil, String</td><td></td><td></td><td></td><td>X</td></tr>
- <tr><td>:addresses</td><td>Array[Hash[:sym] => String]</td><td></td><td>X</td><td></td><td>X</td></tr>
+ <tr><td>:addresses</td><td>[], Array[Hash[:sym] => String]</td><td></td><td>X</td><td></td><td>X</td></tr>
  <tr><td>:job_title</td><td>nil, String</td><td></td><td>X</td><td></td><td>X</td></tr>
  <tr><td>:company</td><td>nil, String</td><td></td><td>X</td><td></td><td>X</td></tr>
  <tr><td>:nickname</td><td>nil, String</td><td></td><td></td><td></td><td>X</td></tr>
  <tr><td>:website</td><td>nil, String</td><td></td><td>X</td><td></td><td>X</td></tr>
- <tr><td>:websites</td><td>Array[Hash[:sym] => String]</td><td></td><td>X</td><td></td><td>X</td></tr>
+ <tr><td>:websites</td><td>[], Array[Hash[:sym] => String]</td><td></td><td>X</td><td></td><td>X</td></tr>
  <tr><td>:notes</td><td>nil, String</td><td></td><td>X</td><td></td><td>X</td></tr>
  <tr><td>:relation</td><td>nil, String</td><td>X</td><td>X</td><td></td><td></td></tr>
 </table>
